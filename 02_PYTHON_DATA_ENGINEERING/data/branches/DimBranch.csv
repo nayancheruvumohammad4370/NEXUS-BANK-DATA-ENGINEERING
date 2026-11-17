@@ -1,0 +1,51 @@
+BranchID,BranchName,City,State,IFSCCode,BranchType,BranchStatus
+1,Nexus Bank Bengaluru Branch 001,Bengaluru,Karnataka,NEXU0000001,Urban,Active
+2,Nexus Bank Mumbai Branch 002,Mumbai,Maharashtra,NEXU0000002,Rural,Active
+3,Nexus Bank Bengaluru Branch 003,Bengaluru,Karnataka,NEXU0000003,Urban,Inactive
+4,Nexus Bank Hyderabad Branch 004,Hyderabad,Telangana,NEXU0000004,Urban,Active
+5,Nexus Bank Mumbai Branch 005,Mumbai,Maharashtra,NEXU0000005,Rural,Active
+6,Nexus Bank Kochi Branch 006,Kochi,Kerala,NEXU0000006,Rural,Inactive
+7,Nexus Bank Mumbai Branch 007,Mumbai,Maharashtra,NEXU0000007,Semi-Urban,Active
+8,Nexus Bank Hyderabad Branch 008,Hyderabad,Telangana,NEXU0000008,Rural,Inactive
+9,Nexus Bank Vijayawada Branch 009,Vijayawada,Andhra Pradesh,NEXU0000009,Metro,Active
+10,Nexus Bank Mumbai Branch 010,Mumbai,Maharashtra,NEXU0000010,Metro,Active
+11,Nexus Bank Bengaluru Branch 011,Bengaluru,Karnataka,NEXU0000011,Semi-Urban,Active
+12,Nexus Bank Vijayawada Branch 012,Vijayawada,Andhra Pradesh,NEXU0000012,Metro,Active
+13,Nexus Bank Hyderabad Branch 013,Hyderabad,Telangana,NEXU0000013,Semi-Urban,Active
+14,Nexus Bank Visakhapatnam Branch 014,Visakhapatnam,Andhra Pradesh,NEXU0000014,Urban,Active
+15,Nexus Bank Kolkata Branch 015,Kolkata,West Bengal,NEXU0000015,Metro,Active
+16,Nexus Bank Bengaluru Branch 016,Bengaluru,Karnataka,NEXU0000016,Urban,Active
+17,Nexus Bank Pune Branch 017,Pune,Maharashtra,NEXU0000017,Urban,Active
+18,Nexus Bank Bengaluru Branch 018,Bengaluru,Karnataka,NEXU0000018,Semi-Urban,Active
+19,Nexus Bank Delhi Branch 019,Delhi,Delhi,NEXU0000019,Metro,Active
+20,Nexus Bank Vijayawada Branch 020,Vijayawada,Andhra Pradesh,NEXU0000020,Metro,Active
+21,Nexus Bank Pune Branch 021,Pune,Maharashtra,NEXU0000021,Urban,Active
+22,Nexus Bank Kochi Branch 022,Kochi,Kerala,NEXU0000022,Rural,Active
+23,Nexus Bank Delhi Branch 023,Delhi,Delhi,NEXU0000023,Semi-Urban,Active
+24,Nexus Bank Kochi Branch 024,Kochi,Kerala,NEXU0000024,Rural,Active
+25,Nexus Bank Hyderabad Branch 025,Hyderabad,Telangana,NEXU0000025,Rural,Active
+26,Nexus Bank Vijayawada Branch 026,Vijayawada,Andhra Pradesh,NEXU0000026,Semi-Urban,Active
+27,Nexus Bank Bengaluru Branch 027,Bengaluru,Karnataka,NEXU0000027,Rural,Active
+28,Nexus Bank Mumbai Branch 028,Mumbai,Maharashtra,NEXU0000028,Semi-Urban,Inactive
+29,Nexus Bank Delhi Branch 029,Delhi,Delhi,NEXU0000029,Rural,Active
+30,Nexus Bank Chennai Branch 030,Chennai,Tamil Nadu,NEXU0000030,Rural,Active
+31,Nexus Bank Kolkata Branch 031,Kolkata,West Bengal,NEXU0000031,Semi-Urban,Inactive
+32,Nexus Bank Vijayawada Branch 032,Vijayawada,Andhra Pradesh,NEXU0000032,Rural,Active
+33,Nexus Bank Kochi Branch 033,Kochi,Kerala,NEXU0000033,Semi-Urban,Active
+34,Nexus Bank Hyderabad Branch 034,Hyderabad,Telangana,NEXU0000034,Urban,Active
+35,Nexus Bank Chennai Branch 035,Chennai,Tamil Nadu,NEXU0000035,Semi-Urban,Active
+36,Nexus Bank Visakhapatnam Branch 036,Visakhapatnam,Andhra Pradesh,NEXU0000036,Semi-Urban,Inactive
+37,Nexus Bank Kochi Branch 037,Kochi,Kerala,NEXU0000037,Metro,Active
+38,Nexus Bank Bengaluru Branch 038,Bengaluru,Karnataka,NEXU0000038,Metro,Active
+39,Nexus Bank Bengaluru Branch 039,Bengaluru,Karnataka,NEXU0000039,Metro,Inactive
+40,Nexus Bank Chennai Branch 040,Chennai,Tamil Nadu,NEXU0000040,Semi-Urban,Active
+41,Nexus Bank Pune Branch 041,Pune,Maharashtra,NEXU0000041,Rural,Active
+42,Nexus Bank Pune Branch 042,Pune,Maharashtra,NEXU0000042,Rural,Active
+43,Nexus Bank Vijayawada Branch 043,Vijayawada,Andhra Pradesh,NEXU0000043,Rural,Active
+44,Nexus Bank Kolkata Branch 044,Kolkata,West Bengal,NEXU0000044,Metro,Inactive
+45,Nexus Bank Hyderabad Branch 045,Hyderabad,Telangana,NEXU0000045,Urban,Active
+46,Nexus Bank Pune Branch 046,Pune,Maharashtra,NEXU0000046,Rural,Active
+47,Nexus Bank Mumbai Branch 047,Mumbai,Maharashtra,NEXU0000047,Urban,Active
+48,Nexus Bank Delhi Branch 048,Delhi,Delhi,NEXU0000048,Urban,Active
+49,Nexus Bank Chennai Branch 049,Chennai,Tamil Nadu,NEXU0000049,Semi-Urban,Active
+50,Nexus Bank Pune Branch 050,Pune,Maharashtra,NEXU0000050,Semi-Urban,Active

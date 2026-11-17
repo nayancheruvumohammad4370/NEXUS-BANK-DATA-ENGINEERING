@@ -1,0 +1,501 @@
+MerchantID,MerchantName,MerchantCategory,City,MerchantStatus
+1,"Choudhury, Bakshi and Maharaj",Restaurant,Pune,Inactive
+2,Kapoor and Sons,Fuel,Mumbai,INACTIVE
+3,"Chaudry, Chahal and Sami", RESTAURANT ,Kochi,Active
+4,Balan Inc,Grocery,Chennai,Inactive
+5,Kaul PLC,Online Shopping,Kolkata,Inactive
+6,"Bala, Issac and Saini",online shopping,Chennai, active 
+7,Sen PLC,utilities,Bengaluru,Inactive
+8,Ahuja-Dutta,electronics,Pune,Inactive
+9,"Sami, Oak and Mall",fuel,Mumbai,Active
+10, KALE LLC ,Electronics,Delhi,ACTIVE
+11,Chanda Group,utilities,Bengaluru, active 
+12,Parmer LLC,Online Shopping,Kochi,Active
+13,"Lalla, Bassi and Sharaf",online shopping,Ahmedabad,ACTIVE
+14,"Dash, Radhakrishnan and Brar",Utilities,Mumbai,Active
+15,"Memon, Pathak and Handa",fuel,Mumbai,Inactive
+16,"Boase, Bath and Kari",restaurant,Pune, active 
+17,Buch-Kaul,Healthcare,Delhi,ACTIVE
+18,Rai LLC, FUEL ,Pune,Active
+19,Patla-Gaba,Utilities,Kolkata,Inactive
+20, PANT-KADAKIA ,shopping,Kochi,ACTIVE
+21,"Loke, Bora and Garg",Online Shopping,Delhi,Active
+22,"Konda, Gade and Shere",Fuel,Delhi, active 
+23,Madan-Kanda,Travel,Chennai,INACTIVE
+24,"Nair, Bhalla and Karnik",Healthcare,Vijayawada, active 
+25,Mutti Group,Entertainment,Pune,Inactive
+26,Bhatti-Kakar, FUEL ,Kolkata,INACTIVE
+27,"Murty, Kala and Tata", TRAVEL ,Ahmedabad, active 
+28,Shanker-Dhar,utilities,Delhi,Inactive
+29,Dewan-Koshy, SHOPPING ,Vijayawada,Active
+30," YOHANNAN, LALL AND SANGHA ",Grocery,Hyderabad,Inactive
+31,"Rastogi, Pathak and Kanda", ELECTRONICS ,Mumbai, active 
+32,Upadhyay Group, ELECTRONICS ,Vijayawada,INACTIVE
+33,Batta Inc, TRAVEL ,Bengaluru,Active
+34,Dutta Ltd,online shopping,Delhi,Active
+35,Bhatt-Rajan,travel,Hyderabad, active 
+36,Sidhu-Wadhwa, GROCERY ,Pune,INACTIVE
+37,Apte-Contractor, SHOPPING ,Mumbai,ACTIVE
+38,"Yadav, Loke and Oak",Online Shopping,Hyderabad,ACTIVE
+39,Memon Group, SHOPPING ,Kolkata,Active
+40, SETTY INC ,utilities,Vijayawada,Active
+41,"Lall, Tella and Gokhale",restaurant,Pune,Inactive
+42,"Cherian, Misra and Tripathi",Grocery,Ahmedabad,Active
+43,"Issac, Dua and Prakash", RESTAURANT ,Vijayawada,Active
+44,Zacharia PLC,Online Shopping,Hyderabad, active 
+45,Naik Group,Online Shopping,Pune,INACTIVE
+46,Choudhury LLC,utilities,Chennai,INACTIVE
+47,Khatri-Bhardwaj, FUEL ,Pune, active 
+48,Brar Inc,healthcare,Kolkata, active 
+49,"Sunder, Biswas and Walia",Restaurant,Chennai,Active
+50, DAVE LTD ,Healthcare,Ahmedabad,INACTIVE
+51,Gandhi-Lanka, FUEL ,Chennai,Active
+52,"Sampath, Kakar and Zacharia", RESTAURANT ,Bengaluru,Inactive
+53,"Iyer, Muni and Rastogi",Restaurant,Delhi,Active
+54,"Prakash, Sarma and Varughese",Online Shopping,Pune, active 
+55,Dara-Kota, FUEL ,Hyderabad,INACTIVE
+56,Bhatt LLC,utilities,Chennai, active 
+57,Karpe PLC,Electronics,Mumbai,Active
+58,Amble Inc,electronics,Kochi, active 
+59,"Bhargava, Karnik and Bir",Entertainment,Mumbai,Active
+60, NARAYANAN INC , ELECTRONICS ,Delhi,Active
+61,"Khanna, Mallick and Sunder",Fuel,Chennai,INACTIVE
+62,Zacharia and Sons,Entertainment,Kochi,Inactive
+63,"Solanki, Kibe and Solanki",travel,Chennai,Active
+64,Gupta-Chandra,Entertainment,Bengaluru,INACTIVE
+65,Sankar LLC,Grocery,Chennai,Inactive
+66,Roy-Sibal,electronics,Vijayawada,Inactive
+67,"Bhagat, Chaudhari and Bhat",Electronics,Hyderabad, active 
+68,Nori-Chopra,grocery,Pune, active 
+69,Handa and Sons,travel,Kolkata, active 
+70," SEN, DEY AND SAMI ",Shopping,Pune,Inactive
+71,Mallick Group, GROCERY ,Kolkata,Active
+72,Borra Group,Healthcare,Bengaluru,INACTIVE
+73,"Chaudhari, Bedi and Zachariah",Entertainment,Bengaluru,INACTIVE
+74,Chander and Sons,Restaurant,Mumbai,INACTIVE
+75,Ray Group, RESTAURANT ,Chennai, active 
+76,Kala-Rattan, RESTAURANT ,Chennai,INACTIVE
+77,Gala Group,Utilities,Ahmedabad,Active
+78,Ramakrishnan LLC, ELECTRONICS ,Ahmedabad,INACTIVE
+79,Mangal-Sampath,online shopping,Pune,Inactive
+80," SUR, DUBEY AND GUPTA ",Healthcare,Pune, active 
+81,Kalla-Bhardwaj, SHOPPING ,Pune, active 
+82,"Bhat, Murthy and Bhandari",Healthcare,Bengaluru, active 
+83,Sood PLC,Utilities,Mumbai,INACTIVE
+84,"Dugar, Bhandari and Trivedi", FUEL ,Pune,Inactive
+85,Grewal Inc,Healthcare,Chennai,ACTIVE
+86,"Bir, Keer and Raval",Travel,Vijayawada,INACTIVE
+87,Koshy PLC, TRAVEL ,Kolkata,Active
+88,"Baral, Bumb and Saini",online shopping,Mumbai,Inactive
+89,"Virk, Mutti and Lal",Travel,Mumbai,INACTIVE
+90, MURTHY AND SONS ,shopping,Pune,INACTIVE
+91,Randhawa-Deep, FUEL ,Delhi,Inactive
+92,"Mital, Shankar and Mutti", TRAVEL ,Vijayawada,ACTIVE
+93,Andra Group,Grocery,Kochi,ACTIVE
+94,"Chaudhry, Borah and Yogi",Grocery,Delhi,Inactive
+95,Toor LLC,Travel,Vijayawada,INACTIVE
+96,Palla Inc, ELECTRONICS ,Bengaluru,Active
+97,Pingle LLC, RESTAURANT ,Hyderabad,INACTIVE
+98,Sarma PLC,grocery,Ahmedabad,INACTIVE
+99,"Mittal, Wadhwa and Anand",shopping,Hyderabad,Active
+100," MISTRY, CHAWLA AND DESAI ",travel,Bengaluru,ACTIVE
+101,D’Alia-Chhabra, FUEL ,Chennai,Active
+102,"Dugal, Magar and Manda", HEALTHCARE ,Kochi,INACTIVE
+103,"Kade, Oza and Jani",Shopping,Hyderabad,Inactive
+104,"Lalla, Tiwari and Suresh",Electronics,Hyderabad,ACTIVE
+105,Behl-Chanda, ELECTRONICS ,Chennai,ACTIVE
+106,"Sampath, Malhotra and Basu", SHOPPING ,Mumbai, active 
+107,Nath and Sons,grocery,Chennai,Inactive
+108,"Lala, Edwin and Sathe",entertainment,Pune,Inactive
+109,"Sane, Andra and Choudhury",Fuel,Chennai, active 
+110, DIXIT PLC ,healthcare,Mumbai,ACTIVE
+111,Pingle PLC, HEALTHCARE ,Kolkata, active 
+112,"Divan, Sani and Datta",online shopping,Bengaluru,Active
+113,Morar LLC,Travel,Ahmedabad,ACTIVE
+114,Parmar and Sons,Grocery,Ahmedabad, active 
+115,"Krish, Chauhan and Pandya", HEALTHCARE ,Delhi, active 
+116,"Ray, Dubey and Khalsa",Utilities,Kochi,INACTIVE
+117,Goel Group,fuel,Bengaluru, active 
+118,Gola Ltd, GROCERY ,Kolkata,Inactive
+119,Sabharwal-Kothari,healthcare,Mumbai,ACTIVE
+120, DUTTA-CHOKSHI ,utilities,Mumbai,ACTIVE
+121,Barad-Singhal,online shopping,Kochi,ACTIVE
+122,Iyengar Group, ELECTRONICS ,Pune,INACTIVE
+123,Mody-Kari,Shopping,Kochi, active 
+124,Bajwa Ltd, SHOPPING ,Ahmedabad,ACTIVE
+125,Rastogi LLC, ELECTRONICS ,Bengaluru,ACTIVE
+126,Boase-Mallick,Travel,Kochi,INACTIVE
+127,Upadhyay-Ratta,utilities,Vijayawada, active 
+128,"Yadav, Narula and Bala",Entertainment,Kolkata, active 
+129,Lal and Sons, SHOPPING ,Mumbai,ACTIVE
+130," LANKA, BARAD AND CHOPRA ",online shopping,Mumbai,Inactive
+131,"Saraf, Pai and Murthy",Travel,Chennai,Inactive
+132,Vaidya-D’Alia,Grocery,Chennai, active 
+133,Gupta-Kumar,Utilities,Vijayawada, active 
+134,Sarin Inc,Utilities,Kochi, active 
+135,"Yohannan, Hegde and Patla",Electronics,Hyderabad,Active
+136,Boase-Narayanan,restaurant,Chennai,Inactive
+137,"Murthy, Dash and Mital",online shopping,Bengaluru,INACTIVE
+138,"More, Rege and Narain",Fuel,Vijayawada,Inactive
+139,Merchant-Datta,entertainment,Vijayawada,INACTIVE
+140, SALVI LTD ,online shopping,Kolkata, active 
+141,Ghosh-Mitra, SHOPPING ,Vijayawada, active 
+142,Acharya-Modi,Travel,Pune,INACTIVE
+143,Kade-Sani,Entertainment,Pune, active 
+144,"Nagy, Shroff and Sathe", RESTAURANT ,Pune,Inactive
+145,Kala-Vaidya,travel,Delhi,INACTIVE
+146,Gara-Chad,Restaurant,Hyderabad,Inactive
+147,Varma-Nayak, ELECTRONICS ,Hyderabad,Inactive
+148,Keer Ltd,restaurant,Kochi,ACTIVE
+149,Kar-Issac,online shopping,Kochi,Active
+150, BAKSHI INC ,fuel,Kochi,INACTIVE
+151,Soman PLC, GROCERY ,Kochi, active 
+152,Shah Group,grocery,Pune, active 
+153,"Hayer, Rajagopalan and Talwar", ELECTRONICS ,Kolkata,INACTIVE
+154,Kohli-Divan,fuel,Chennai,ACTIVE
+155,"Ahluwalia, Chhabra and Sandal",electronics,Bengaluru, active 
+156,Goda Ltd, HEALTHCARE ,Kochi,Inactive
+157,"Shetty, Bedi and Krish",Entertainment,Ahmedabad,INACTIVE
+158,Shan and Sons,grocery,Ahmedabad,INACTIVE
+159,Wali-Nadig,Grocery,Kochi,Inactive
+160, THAMAN-SANDHU ,Entertainment,Bengaluru,ACTIVE
+161,"Sehgal, Dutt and Soman",electronics,Chennai, active 
+162,Lad-Kota,healthcare,Kochi,ACTIVE
+163,"Malhotra, Verma and Sundaram",electronics,Mumbai, active 
+164,"Khare, Maharaj and Sarraf", GROCERY ,Kolkata,Active
+165,Mangal and Sons,Healthcare,Mumbai,Active
+166,Nayak-Nagarajan,Grocery,Chennai,Active
+167,"Buch, Devi and Dora",Utilities,Chennai,Inactive
+168,Rajagopal Ltd,Entertainment,Ahmedabad,Inactive
+169,Kala Inc,entertainment,Delhi,Inactive
+170, REDDY-NARAYANAN ,Utilities,Hyderabad,ACTIVE
+171,"Shukla, Sagar and Bhatia", RESTAURANT ,Bengaluru,ACTIVE
+172,Salvi Group,utilities,Kochi,Inactive
+173,"Bahri, Rai and Sood", RESTAURANT ,Chennai,Active
+174,Pandey LLC, TRAVEL ,Ahmedabad,Active
+175,Saini-Yohannan,Utilities,Delhi,INACTIVE
+176,"Kannan, Sura and Kanda", ELECTRONICS ,Delhi,Active
+177,Sarin-Sunder,online shopping,Bengaluru, active 
+178,Ramachandran LLC,Entertainment,Kochi,ACTIVE
+179,"Ravel, Gandhi and Sibal",Entertainment,Kochi,Inactive
+180, WALLA INC ,online shopping,Ahmedabad,INACTIVE
+181,Bala-Chacko,entertainment,Kochi,INACTIVE
+182,"Sangha, Deshmukh and Shenoy",travel,Chennai,Active
+183,Bedi LLC,travel,Chennai, active 
+184,Narang-Kakar,utilities,Delhi,Active
+185,Narain-Nazareth,entertainment,Hyderabad, active 
+186,Mall-Sama,fuel,Pune,ACTIVE
+187,Bumb-Singhal, TRAVEL ,Pune,INACTIVE
+188,Zacharia Inc, GROCERY ,Chennai,Active
+189,Kapur-Biswas, FUEL ,Kochi, active 
+190," BARIA, BALASUBRAMANIAN AND KOTA ",Online Shopping,Vijayawada, active 
+191,Bahri PLC,Entertainment,Mumbai,ACTIVE
+192,Khare and Sons,fuel,Chennai,ACTIVE
+193,Contractor-Kamdar,utilities,Vijayawada,INACTIVE
+194,Kunda-Pillay,online shopping,Kochi,INACTIVE
+195,Contractor and Sons,healthcare,Vijayawada,ACTIVE
+196,Chokshi-Bal,travel,Chennai,Active
+197,Prashad-Ranganathan,fuel,Mumbai,INACTIVE
+198,"Issac, Borra and Kibe",Shopping,Chennai, active 
+199,Mitra Ltd, TRAVEL ,Ahmedabad,INACTIVE
+200," DARA, BARMAN AND PALAN ",utilities,Mumbai,Inactive
+201,"Sangha, Prabhakar and Biswas",Travel,Delhi,Inactive
+202,"Om, Arora and Salvi",Travel,Kolkata,Inactive
+203,Cherian-Sant,Travel,Bengaluru,INACTIVE
+204,Sharaf-Dua, TRAVEL ,Hyderabad, active 
+205,Goda-Vig,Restaurant,Ahmedabad,ACTIVE
+206,"Madan, Yohannan and Sule",entertainment,Vijayawada,ACTIVE
+207,Sarin-Loyal,Shopping,Pune, active 
+208,Korpal-Chadha,Restaurant,Kochi, active 
+209,Seshadri-Kohli, RESTAURANT ,Bengaluru,Inactive
+210, RAGHAVAN-NAYAR , SHOPPING ,Pune,Active
+211,Talwar LLC,Fuel,Kolkata, active 
+212,Sura and Sons,Utilities,Kolkata, active 
+213,Kuruvilla-Oak,entertainment,Pune,INACTIVE
+214,Majumdar-Anne,electronics,Ahmedabad,INACTIVE
+215,"Halder, Chada and Khurana", GROCERY ,Mumbai,Inactive
+216,"Ray, Suresh and Khosla",fuel,Mumbai,Inactive
+217,"Soni, Swaminathan and Sem",Fuel,Kolkata,Active
+218,Chander LLC,Shopping,Kochi, active 
+219,Ravel Ltd,utilities,Pune,Active
+220, MOHAN LTD ,fuel,Pune, active 
+221,"Pillay, Solanki and Wali", RESTAURANT ,Chennai,ACTIVE
+222,Sandal-Narayanan,Utilities,Kochi,Active
+223,Setty-Madan,Online Shopping,Hyderabad,ACTIVE
+224,Krishnamurthy-Kashyap,Shopping,Bengaluru,Inactive
+225,Hans LLC, TRAVEL ,Ahmedabad,ACTIVE
+226,Wason Ltd,Entertainment,Vijayawada,ACTIVE
+227,Handa and Sons,electronics,Kolkata,INACTIVE
+228,"Sule, Malhotra and Vohra",entertainment,Mumbai,INACTIVE
+229,"Mandal, Chaudhry and Hari",grocery,Delhi,INACTIVE
+230, KARAN-PATEL ,Travel,Mumbai,Inactive
+231,Mittal Inc,Utilities,Pune,INACTIVE
+232,"Walla, Date and Mahal",Grocery,Vijayawada,INACTIVE
+233,Bhagat PLC,entertainment,Hyderabad,INACTIVE
+234,Date-Swaminathan, ELECTRONICS ,Vijayawada,Active
+235,Arora PLC,entertainment,Kochi,ACTIVE
+236,Singh-Srinivas, HEALTHCARE ,Mumbai,Inactive
+237,Oak-Gour,healthcare,Vijayawada,ACTIVE
+238,Krishnan Group, ELECTRONICS ,Bengaluru, active 
+239,Bhattacharyya Group,restaurant,Pune,ACTIVE
+240, BORAH-BERA ,restaurant,Kolkata,Active
+241,Dixit PLC,online shopping,Kochi,Active
+242,Chada-Kothari, FUEL ,Delhi,INACTIVE
+243,Saha PLC,entertainment,Bengaluru,Inactive
+244,"Kara, Virk and Rai", TRAVEL ,Hyderabad,ACTIVE
+245,Savant-Mishra,entertainment,Mumbai,Active
+246,"Sanghvi, Mody and Bhasin",Utilities,Hyderabad,ACTIVE
+247,"Chaudhary, Johal and Kakar",Online Shopping,Kolkata, active 
+248,Bumb-Dugar,Restaurant,Mumbai, active 
+249,Ghose PLC, RESTAURANT ,Hyderabad, active 
+250, DUGAR INC , TRAVEL ,Pune, active 
+251,Seshadri-Singhal,entertainment,Chennai, active 
+252,Bali-Kata,Online Shopping,Kochi,Inactive
+253,Mandal-Setty,Utilities,Mumbai,ACTIVE
+254,Kaur LLC,electronics,Kolkata,ACTIVE
+255,"Hora, Sandal and Contractor",grocery,Pune,INACTIVE
+256,"Kar, Dixit and Lata",utilities,Hyderabad, active 
+257,Bora Inc,online shopping,Delhi,ACTIVE
+258,Mohanty PLC,online shopping,Vijayawada,ACTIVE
+259,"Mani, Sarna and Dash", FUEL ,Chennai,INACTIVE
+260, MODI-RAU ,Electronics,Kochi,Active
+261,Tella-Zacharia, HEALTHCARE ,Vijayawada, active 
+262,Sarma-Buch, ELECTRONICS ,Hyderabad, active 
+263,"Baral, Sankaran and Naidu",Grocery,Kolkata,INACTIVE
+264,"Krishna, Bal and Chand",Healthcare,Vijayawada,Active
+265,Bail Ltd,online shopping,Bengaluru,Inactive
+266,Baria-Gill, ELECTRONICS ,Hyderabad,Active
+267,Venkataraman-Sathe,entertainment,Delhi,INACTIVE
+268,Golla-Sarin, ELECTRONICS ,Mumbai,ACTIVE
+269,"Swamy, Chand and Singhal",online shopping,Delhi, active 
+270, REGE-NATH ,Online Shopping,Ahmedabad,Active
+271,Cheema-Dyal, FUEL ,Pune,Inactive
+272,Sabharwal-Tandon,restaurant,Mumbai,Active
+273,Rattan-Bansal,Entertainment,Pune,Active
+274,Chakrabarti-Murty,grocery,Bengaluru,ACTIVE
+275,Naik-D’Alia,healthcare,Kochi,Inactive
+276,Varkey-Agarwal, FUEL ,Kochi,INACTIVE
+277,"Shere, Sachdev and Bhagat",Shopping,Hyderabad,Active
+278,Vasa LLC,utilities,Ahmedabad,Inactive
+279,"Tara, Sathe and Behl",Entertainment,Chennai, active 
+280, LOKE PLC ,travel,Pune,Active
+281,Mani Group,entertainment,Kolkata,Inactive
+282,"Sundaram, Dara and Balakrishnan",restaurant,Delhi,INACTIVE
+283,"Khatri, Dutt and Mukhopadhyay", TRAVEL ,Kochi,ACTIVE
+284,"Atwal, Reddy and Chander",entertainment,Chennai, active 
+285,Comar Group,Entertainment,Chennai, active 
+286,Dube Group,utilities,Ahmedabad,ACTIVE
+287,"Manne, Upadhyay and Mahajan",Travel,Kochi,ACTIVE
+288,Subramanian-Sodhi, GROCERY ,Bengaluru,INACTIVE
+289,Shan PLC,entertainment,Chennai,INACTIVE
+290, RAJAGOPAL AND SONS ,Healthcare,Chennai,INACTIVE
+291,"Trivedi, Deshpande and Boase", TRAVEL ,Hyderabad,Active
+292,Sachdeva-Oak,grocery,Vijayawada,Active
+293,"Loke, Agate and Mandal",utilities,Hyderabad,Active
+294,"Misra, Suri and Dixit",travel,Kochi,Inactive
+295,Yohannan-Sule,Fuel,Kolkata,ACTIVE
+296,Natarajan-Purohit,online shopping,Hyderabad,ACTIVE
+297,Nagy-Gulati,entertainment,Delhi,Active
+298,"Khare, Rajagopal and Kaur",Entertainment,Hyderabad,Inactive
+299,Bassi-Nadkarni, ELECTRONICS ,Delhi,Active
+300," SOLANKI, RAJ AND RAJU ",Electronics,Pune,INACTIVE
+301,"Doshi, Tandon and Bansal",restaurant,Delhi,ACTIVE
+302,Thakkar PLC,utilities,Delhi,Active
+303,Chaudhry-Sarraf,fuel,Bengaluru,INACTIVE
+304,Vora Group,online shopping,Ahmedabad,Inactive
+305,Dhawan Group, RESTAURANT ,Vijayawada,ACTIVE
+306,"Dubey, Borde and Singh",Electronics,Hyderabad,Active
+307,Nigam-Rao,grocery,Vijayawada,Active
+308,"Buch, Narasimhan and Walla",Restaurant,Kolkata,Inactive
+309,Nadig-Sura,electronics,Delhi,INACTIVE
+310," BANIK, BISWAS AND KEER ", ELECTRONICS ,Hyderabad, active 
+311,"Mani, Karan and Chana",restaurant,Ahmedabad, active 
+312,Chaudhari-Chaudhry,Travel,Delhi,Inactive
+313,Ganesan-Mistry,entertainment,Chennai,ACTIVE
+314,Batra LLC, RESTAURANT ,Delhi,INACTIVE
+315,Memon LLC,Healthcare,Kochi,ACTIVE
+316,Sankar-Dhingra,Fuel,Vijayawada,Active
+317,Wali Group, FUEL ,Ahmedabad,Active
+318,"Gole, Garde and Gill",grocery,Chennai,Inactive
+319,Raja PLC,Utilities,Mumbai,INACTIVE
+320," KHOSLA, TANK AND DHAR ", FUEL ,Chennai,Inactive
+321,Shenoy Ltd,Healthcare,Ahmedabad,Active
+322,Sharaf-Kumer,Travel,Hyderabad,INACTIVE
+323,"Andra, Shroff and Mani",Travel,Mumbai,Active
+324,"Dugar, Borah and Sathe",Shopping,Delhi,Inactive
+325,Mistry-Samra,utilities,Bengaluru,Inactive
+326,"Krishna, Shan and Mittal",Travel,Hyderabad, active 
+327,Rajagopalan Group,Online Shopping,Mumbai, active 
+328,Khalsa Group,entertainment,Kolkata,INACTIVE
+329,"Parmer, Merchant and Merchant",restaurant,Kolkata,Inactive
+330, RANDHAWA LLC ,Utilities,Kolkata,ACTIVE
+331,Bawa PLC,Entertainment,Bengaluru, active 
+332,"Taneja, Mangat and Karpe",electronics,Mumbai, active 
+333,"Pandey, Kanda and Gupta",Entertainment,Mumbai,ACTIVE
+334,"Krishna, Devan and Chatterjee",Utilities,Mumbai,Inactive
+335,"Baral, More and Sastry", TRAVEL ,Ahmedabad,INACTIVE
+336,Patla Ltd,healthcare,Ahmedabad,INACTIVE
+337,Chana LLC,travel,Kolkata,INACTIVE
+338,Sagar-Gill,Electronics,Mumbai,INACTIVE
+339,Deo PLC,fuel,Vijayawada,Inactive
+340, WALI-THAKER ,electronics,Vijayawada, active 
+341,Gala-Kurian, ELECTRONICS ,Mumbai,ACTIVE
+342,Merchant-Nigam,electronics,Pune,ACTIVE
+343,Sidhu Inc, SHOPPING ,Vijayawada,Active
+344,Kara Ltd,Restaurant,Mumbai, active 
+345,"Ranganathan, Pau and Chana", RESTAURANT ,Delhi,Inactive
+346,Atwal-Lalla,Online Shopping,Ahmedabad,INACTIVE
+347,"Dasgupta, Sha and Pillay",online shopping,Mumbai, active 
+348,"Lala, Raj and Prabhu", HEALTHCARE ,Kochi,Active
+349,Kaur Group, TRAVEL ,Pune,ACTIVE
+350, NARANG PLC , RESTAURANT ,Kolkata,Inactive
+351,Bhatnagar Ltd, SHOPPING ,Vijayawada,Inactive
+352,Mittal-Rege,restaurant,Kolkata,ACTIVE
+353,Dey Inc,restaurant,Ahmedabad,Inactive
+354,Modi Group, ELECTRONICS ,Ahmedabad,INACTIVE
+355,Chatterjee and Sons,Online Shopping,Ahmedabad,ACTIVE
+356,"Deshmukh, Rama and Setty",Grocery,Pune,ACTIVE
+357,Zachariah-Saini,healthcare,Bengaluru,Inactive
+358,"Dubey, Sachdeva and Chaudhary", SHOPPING ,Kochi,Active
+359,Reddy-Mammen, SHOPPING ,Bengaluru,Active
+360, PRABHAKAR AND SONS ,Online Shopping,Kochi, active 
+361,Saxena-Keer,entertainment,Hyderabad,ACTIVE
+362,Chaudhary-Pillai, TRAVEL ,Delhi,INACTIVE
+363,"Parmer, Bhat and Rao",Utilities,Bengaluru,Inactive
+364,Gupta-Das, SHOPPING ,Bengaluru,Active
+365,Chand-Kala,travel,Kochi, active 
+366,"Bail, Bedi and Nath",utilities,Kochi,ACTIVE
+367,Dass PLC, FUEL ,Mumbai,ACTIVE
+368,Biswas PLC,Electronics,Pune,INACTIVE
+369,Kalita and Sons,entertainment,Bengaluru,Inactive
+370, DIVAN-AGATE , ELECTRONICS ,Bengaluru,Active
+371,Dhillon-De,fuel,Chennai,Inactive
+372,"Krishna, Ghosh and Choudhary",travel,Delhi,Active
+373,"Bal, Deep and Aurora",grocery,Kochi,Inactive
+374,Khanna-Naik,shopping,Kolkata,Inactive
+375,Ghosh LLC,online shopping,Mumbai, active 
+376,Date Ltd,grocery,Bengaluru, active 
+377,Vora-Comar,restaurant,Ahmedabad, active 
+378,"Bhatt, Soni and Sen",utilities,Kochi,ACTIVE
+379,Varghese-Chopra,restaurant,Bengaluru,ACTIVE
+380, THAKUR-KANT , SHOPPING ,Vijayawada,ACTIVE
+381,"Bassi, Verma and Mitra",restaurant,Mumbai,Inactive
+382,Balasubramanian-Bhat, ELECTRONICS ,Kochi,INACTIVE
+383,Ratti-Sandhu,restaurant,Pune,ACTIVE
+384,"Chokshi, Swaminathan and Sawhney",fuel,Hyderabad,Active
+385,Buch LLC,Online Shopping,Kolkata,INACTIVE
+386,"Divan, Bhatti and Date",fuel,Delhi,Inactive
+387,Nair-Raj,Fuel,Hyderabad,ACTIVE
+388,"Wali, Menon and Setty",Fuel,Ahmedabad,Inactive
+389,"Sani, Chaudhary and Contractor",Restaurant,Vijayawada, active 
+390," KALE, SANI AND SETH ",utilities,Ahmedabad,INACTIVE
+391,Sachdev LLC, HEALTHCARE ,Delhi,Inactive
+392,Rastogi-Sagar,Entertainment,Vijayawada, active 
+393,"Chandran, Munshi and Sane",travel,Ahmedabad,Active
+394,Kumer-Prasad, HEALTHCARE ,Mumbai,ACTIVE
+395,Som Inc,entertainment,Bengaluru,Active
+396,Chada Inc,healthcare,Mumbai,Active
+397,Char-Pradhan,utilities,Vijayawada,INACTIVE
+398,Bhasin PLC,Online Shopping,Vijayawada,INACTIVE
+399,"Narayan, Das and Roy",fuel,Ahmedabad, active 
+400, SAMPATH-BEHL ,Online Shopping,Bengaluru, active 
+401,Muni-Pandey,restaurant,Mumbai,INACTIVE
+402,Tripathi and Sons,Shopping,Chennai, active 
+403,Subramaniam and Sons,Entertainment,Delhi,ACTIVE
+404,Palla PLC,travel,Kochi,ACTIVE
+405,Contractor-Mallick,Utilities,Delhi,Active
+406,"Kara, Sanghvi and Bal",Healthcare,Kolkata, active 
+407,"Loke, Balakrishnan and Gole",travel,Ahmedabad,Inactive
+408,More-Nori,Healthcare,Ahmedabad,Inactive
+409,Ahuja-Golla,healthcare,Kochi,Inactive
+410, RATTAN INC ,Utilities,Pune,INACTIVE
+411,Balasubramanian Inc, ELECTRONICS ,Delhi,Inactive
+412,"Wali, Kale and Puri",Online Shopping,Kochi,INACTIVE
+413,Setty-Om,Healthcare,Delhi,ACTIVE
+414,Pingle LLC,Shopping,Delhi, active 
+415,"Nair, Chad and Ben",Fuel,Hyderabad,Inactive
+416,Dugar PLC,restaurant,Mumbai,INACTIVE
+417,Bumb LLC,Online Shopping,Delhi,INACTIVE
+418,Samra-Sunder, SHOPPING ,Kochi,Inactive
+419,"Sathe, Sachdeva and Mahajan",Shopping,Ahmedabad,Inactive
+420, VALA INC ,Entertainment,Kochi,ACTIVE
+421,Sani-Choudhry,fuel,Ahmedabad,ACTIVE
+422,Sur-Vyas,Entertainment,Kolkata,Inactive
+423,"Morar, Bath and Kannan",travel,Chennai,ACTIVE
+424,Bhakta-Amble,utilities,Vijayawada,ACTIVE
+425,Mitra and Sons, ELECTRONICS ,Kolkata, active 
+426,Kumer LLC,Shopping,Ahmedabad,Inactive
+427,Dar-Amble,Travel,Vijayawada,ACTIVE
+428,Sani-Gill,Online Shopping,Kolkata,Active
+429,Rai PLC,Travel,Hyderabad,ACTIVE
+430," KARPE, TELLA AND PANDYA ",Entertainment,Kochi,Active
+431,Ranganathan Ltd,fuel,Delhi,Active
+432,Sarin Inc,Electronics,Kochi,INACTIVE
+433,Brahmbhatt-Munshi,Healthcare,Kochi,Active
+434,"Sanghvi, Ravel and Sahni",Healthcare,Bengaluru,ACTIVE
+435,Contractor-Ravel, RESTAURANT ,Delhi,Inactive
+436,Nair and Sons,Shopping,Pune, active 
+437,"Sharma, Pathak and Chakrabarti", SHOPPING ,Vijayawada, active 
+438,Cherian-Kohli,Utilities,Mumbai,Active
+439,Rattan-Viswanathan,Travel,Hyderabad,INACTIVE
+440, RANDHAWA LLC ,utilities,Mumbai,ACTIVE
+441,"Nori, Kant and Nath",fuel,Mumbai,Active
+442,Bose PLC,fuel,Ahmedabad, active 
+443,"Comar, Wali and Uppal",Restaurant,Vijayawada,INACTIVE
+444,Palla LLC,Online Shopping,Kolkata,INACTIVE
+445,"Divan, Keer and Chauhan", FUEL ,Hyderabad,ACTIVE
+446,Kunda and Sons,Electronics,Ahmedabad,ACTIVE
+447,Dua Ltd, FUEL ,Kochi,Inactive
+448,Goel Ltd, RESTAURANT ,Delhi,Active
+449,Shetty-Sen,Online Shopping,Kochi, active 
+450," NAIDU, MUTTI AND DORA ", GROCERY ,Kochi,ACTIVE
+451,Bir-Singh, TRAVEL ,Bengaluru,ACTIVE
+452,Mitter-Maharaj,restaurant,Chennai,Active
+453,"Bhalla, Pandey and Tripathi",utilities,Hyderabad,Active
+454,Mukherjee Group, HEALTHCARE ,Delhi,Inactive
+455,Barad-Bhandari,entertainment,Hyderabad,Inactive
+456,Mangat-Bose, RESTAURANT ,Vijayawada,Active
+457,"Chana, Tripathi and Rajagopalan",Travel,Bengaluru,Inactive
+458,Barman-Sengupta,grocery,Pune,INACTIVE
+459,"Guha, Nagy and Soni", ELECTRONICS ,Vijayawada,ACTIVE
+460," DORA, BHATIA AND SESHADRI ", GROCERY ,Chennai,ACTIVE
+461,Oza Ltd,Healthcare,Delhi,ACTIVE
+462,Thaman Ltd,restaurant,Kochi, active 
+463,Baral and Sons,entertainment,Delhi,Inactive
+464,"Sarma, Sarna and Viswanathan",entertainment,Delhi,INACTIVE
+465,"Dutt, Patla and Pradhan",Travel,Kochi,Active
+466,Ram-Rege, ELECTRONICS ,Hyderabad,INACTIVE
+467,Ben-Natt,travel,Mumbai,Active
+468,Narayan Inc, HEALTHCARE ,Pune,ACTIVE
+469,"Raju, Mander and Krishnan",entertainment,Hyderabad, active 
+470," DOCTOR, NATH AND BUMB ",healthcare,Bengaluru,ACTIVE
+471,"Dhaliwal, Palla and Mukherjee",utilities,Pune,Active
+472,"Ramanathan, Dayal and Chad", RESTAURANT ,Kochi,ACTIVE
+473,Puri-Narasimhan,Online Shopping,Bengaluru,Inactive
+474,Vyas Inc,utilities,Bengaluru,Inactive
+475,"Sampath, Trivedi and Pathak",Restaurant,Delhi,ACTIVE
+476,Patil LLC, ELECTRONICS ,Bengaluru,INACTIVE
+477,Kala LLC, SHOPPING ,Vijayawada,ACTIVE
+478,Handa-Kara,healthcare,Mumbai,INACTIVE
+479,Dubey Inc, SHOPPING ,Delhi, active 
+480, CHAUDHURI-TRIPATHI , HEALTHCARE ,Pune,Inactive
+481,"Vyas, Barad and Nayar",Restaurant,Hyderabad, active 
+482,"Deep, Puri and Dube",online shopping,Kolkata,Active
+483,Golla Ltd,travel,Vijayawada,Inactive
+484,"Gandhi, Sarma and Bassi",utilities,Vijayawada,Inactive
+485,Patla-Khanna,Restaurant,Mumbai, active 
+486,Mane-Sen, SHOPPING ,Vijayawada,Active
+487,Walla and Sons, HEALTHCARE ,Delhi,Active
+488,Singh-Hari,online shopping,Pune,Inactive
+489,Sastry-Shenoy,shopping,Kolkata,Inactive
+490, RAJA-THAKKAR ,Restaurant,Hyderabad,Inactive
+491,"Sahota, Edwin and Iyengar",Entertainment,Delhi,INACTIVE
+492,"Devi, Krishna and Ben",utilities,Vijayawada,INACTIVE
+493,"Srivastava, Prabhu and Chauhan", SHOPPING ,Mumbai,Active
+494,"Varty, Dash and Mane",travel,Vijayawada,INACTIVE
+495,Dyal LLC,electronics,Ahmedabad,Active
+496,Varghese-Din,shopping,Mumbai, active 
+497,Chand-Kapadia,entertainment,Hyderabad,INACTIVE
+498,Palla-Bala,Utilities,Hyderabad, active 
+499,Bera-Randhawa,Online Shopping,Mumbai,INACTIVE
+500," PRAKASH, KEER AND RAJU ",shopping,Hyderabad,Inactive
