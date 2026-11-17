@@ -1,0 +1,1065 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "type": "string",
+            "metadata": "Data Factory name",
+            "defaultValue": "adf-nexus-bank"
+        },
+        "LS_SQLSERVER_NEXUSBANK_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'LS_SQLSERVER_NEXUSBANK'"
+        },
+        "LS_SQL_NEXUS_AUDIT_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'LS_SQL_NEXUS_AUDIT'"
+        },
+        "LS_SQLSERVER_NEXUSBANK_properties_typeProperties_server": {
+            "type": "string",
+            "defaultValue": ".\\SQLEXPRESS"
+        },
+        "LS_SQLSERVER_NEXUSBANK_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "NexusBank_DB"
+        },
+        "LS_SQLSERVER_NEXUSBANK_properties_typeProperties_userName": {
+            "type": "string",
+            "defaultValue": "adf_sql_login"
+        },
+        "LS_ADLS_NEXUSBANK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://stnexusbank2026.dfs.core.windows.net/"
+        },
+        "LS_SQL_NEXUS_AUDIT_properties_typeProperties_server": {
+            "type": "string",
+            "defaultValue": ".\\SQLEXPRESS"
+        },
+        "LS_SQL_NEXUS_AUDIT_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "NexusBank_DB"
+        },
+        "LS_SQL_NEXUS_AUDIT_properties_typeProperties_userName": {
+            "type": "string",
+            "defaultValue": "adf_sql_login"
+        },
+        "SHIR-NEXUSBANK_properties_typeProperties_linkedInfo_resourceId": {
+            "type": "string",
+            "defaultValue": "/subscriptions/REDACTED-SUBSCRIPTION-ID/resourceGroups/REDACTED-RESOURCE-GROUP/providers/Microsoft.DataFactory/factories/REDACTED-FACTORY/integrationRuntimes/REDACTED-IR"
+        }
+    },
+    "variables": {
+        "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+    },
+    "resources": [
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SQLSERVER_NEXUSBANK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "SqlServer",
+                "typeProperties": {
+                    "server": "[parameters('LS_SQLSERVER_NEXUSBANK_properties_typeProperties_server')]",
+                    "database": "[parameters('LS_SQLSERVER_NEXUSBANK_properties_typeProperties_database')]",
+                    "encrypt": "mandatory",
+                    "trustServerCertificate": true,
+                    "authenticationType": "SQL",
+                    "userName": "[parameters('LS_SQLSERVER_NEXUSBANK_properties_typeProperties_userName')]",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SQLSERVER_NEXUSBANK_password')]"
+                    },
+                    "alwaysEncryptedSettings": {
+                        "alwaysEncryptedAkvAuthType": "ManagedIdentity"
+                    }
+                },
+                "connectVia": {
+                    "referenceName": "SHIR-NEXUSBANK",
+                    "type": "IntegrationRuntimeReference"
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/integrationRuntimes/SHIR-NEXUSBANK')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_ADLS_NEXUSBANK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_ADLS_NEXUSBANK_properties_typeProperties_url')]"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SQL_NEXUS_AUDIT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "SqlServer",
+                "typeProperties": {
+                    "server": "[parameters('LS_SQL_NEXUS_AUDIT_properties_typeProperties_server')]",
+                    "database": "[parameters('LS_SQL_NEXUS_AUDIT_properties_typeProperties_database')]",
+                    "encrypt": "mandatory",
+                    "trustServerCertificate": true,
+                    "authenticationType": "SQL",
+                    "userName": "[parameters('LS_SQL_NEXUS_AUDIT_properties_typeProperties_userName')]",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SQL_NEXUS_AUDIT_password')]"
+                    },
+                    "alwaysEncryptedSettings": {
+                        "alwaysEncryptedAkvAuthType": "ManagedIdentity"
+                    }
+                },
+                "connectVia": {
+                    "referenceName": "SHIR-NEXUSBANK",
+                    "type": "IntegrationRuntimeReference"
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/integrationRuntimes/SHIR-NEXUSBANK')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/DS_SQL_IngestionConfig')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "LS_SQLSERVER_NEXUSBANK",
+                    "type": "LinkedServiceReference"
+                },
+                "annotations": [],
+                "type": "SqlServerTable",
+                "schema": [
+                    {
+                        "name": "ConfigID",
+                        "type": "int",
+                        "precision": 10
+                    },
+                    {
+                        "name": "SourceSchema",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "SourceTable",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "TargetFolder",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "TargetFileName",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "IsActive",
+                        "type": "bit"
+                    }
+                ],
+                "typeProperties": {
+                    "schema": "control",
+                    "table": "IngestionConfig"
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/LS_SQLSERVER_NEXUSBANK')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/DS_SQL_DimCustomer')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "LS_SQLSERVER_NEXUSBANK",
+                    "type": "LinkedServiceReference"
+                },
+                "parameters": {
+                    "pSchema": {
+                        "type": "string",
+                        "defaultValue": "bank"
+                    },
+                    "pTable": {
+                        "type": "string",
+                        "defaultValue": "FactTransaction"
+                    }
+                },
+                "annotations": [],
+                "type": "SqlServerTable",
+                "schema": [
+                    {
+                        "name": "CustomerID",
+                        "type": "int",
+                        "precision": 10
+                    },
+                    {
+                        "name": "FirstName",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "LastName",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "Email",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "Phone",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "Gender",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "DateOfBirth",
+                        "type": "date"
+                    },
+                    {
+                        "name": "City",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "State",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "CustomerSegment",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "RegistrationDate",
+                        "type": "date"
+                    },
+                    {
+                        "name": "CustomerStatus",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "CreatedDate",
+                        "type": "datetime2",
+                        "scale": 7
+                    }
+                ],
+                "typeProperties": {
+                    "schema": {
+                        "value": "@dataset().pSchema",
+                        "type": "Expression"
+                    },
+                    "table": {
+                        "value": "@dataset().pTable",
+                        "type": "Expression"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/LS_SQLSERVER_NEXUSBANK')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/DS_ADLS_DimCustomer_Bronze')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "LS_ADLS_NEXUSBANK",
+                    "type": "LinkedServiceReference"
+                },
+                "parameters": {
+                    "pFolder": {
+                        "type": "string",
+                        "defaultValue": "dimcustomer"
+                    },
+                    "pFileName": {
+                        "type": "string",
+                        "defaultValue": "DimCustomer.parquet"
+                    }
+                },
+                "annotations": [],
+                "type": "Parquet",
+                "typeProperties": {
+                    "location": {
+                        "type": "AzureBlobFSLocation",
+                        "fileName": {
+                            "value": "@dataset().pFileName",
+                            "type": "Expression"
+                        },
+                        "folderPath": {
+                            "value": "@concat('bronze/',dataset().pFolder)",
+                            "type": "Expression"
+                        },
+                        "fileSystem": "nexusbank"
+                    },
+                    "compressionCodec": "snappy"
+                },
+                "schema": []
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/LS_ADLS_NEXUSBANK')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/DS_SQL_NEXUS_AUDIT')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "LS_SQL_NEXUS_AUDIT",
+                    "type": "LinkedServiceReference"
+                },
+                "annotations": [],
+                "type": "SqlServerTable",
+                "schema": [
+                    {
+                        "name": "AuditID",
+                        "type": "bigint",
+                        "precision": 19
+                    },
+                    {
+                        "name": "PipelineName",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "TableName",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "RunID",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "StartTime",
+                        "type": "datetime2",
+                        "scale": 7
+                    },
+                    {
+                        "name": "EndTime",
+                        "type": "datetime2",
+                        "scale": 7
+                    },
+                    {
+                        "name": "RowsRead",
+                        "type": "bigint",
+                        "precision": 19
+                    },
+                    {
+                        "name": "RowsCopied",
+                        "type": "bigint",
+                        "precision": 19
+                    },
+                    {
+                        "name": "PipelineStatus",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "ErrorMessage",
+                        "type": "varchar"
+                    },
+                    {
+                        "name": "CreatedDate",
+                        "type": "datetime2",
+                        "scale": 7
+                    }
+                ],
+                "typeProperties": {
+                    "schema": "audit",
+                    "table": "PipelineAudit"
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/LS_SQL_NEXUS_AUDIT')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/SHIR-NEXUSBANK')]",
+            "type": "Microsoft.DataFactory/factories/integrationRuntimes",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "type": "SelfHosted",
+                "typeProperties": {
+                    "linkedInfo": {
+                        "resourceId": "[parameters('SHIR-NEXUSBANK_properties_typeProperties_linkedInfo_resourceId')]",
+                        "authorizationType": "Rbac"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/PL_NEXUS_DIMCUSTOMER_BRONZE')]",
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "Copy_DimCustomer_To_Bronze",
+                        "type": "Copy",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "source": {
+                                "type": "SqlServerSource",
+                                "queryTimeout": "02:00:00",
+                                "partitionOption": "None"
+                            },
+                            "sink": {
+                                "type": "ParquetSink",
+                                "storeSettings": {
+                                    "type": "AzureBlobFSWriteSettings",
+                                    "copyBehavior": "PreserveHierarchy"
+                                },
+                                "formatSettings": {
+                                    "type": "ParquetWriteSettings"
+                                }
+                            },
+                            "enableStaging": false,
+                            "translator": {
+                                "type": "TabularTranslator",
+                                "mappings": [
+                                    {
+                                        "source": {
+                                            "name": "CustomerID",
+                                            "type": "Int32",
+                                            "physicalType": "int"
+                                        },
+                                        "sink": {
+                                            "name": "CustomerID",
+                                            "type": "Int32",
+                                            "physicalType": "INT_32"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "FirstName",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "FirstName",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "LastName",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "LastName",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "Email",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "Email",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "Phone",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "Phone",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "Gender",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "Gender",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "DateOfBirth",
+                                            "type": "Date",
+                                            "physicalType": "date"
+                                        },
+                                        "sink": {
+                                            "name": "DateOfBirth",
+                                            "type": "Date"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "City",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "City",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "State",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "State",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "CustomerSegment",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "CustomerSegment",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "RegistrationDate",
+                                            "type": "Date",
+                                            "physicalType": "date"
+                                        },
+                                        "sink": {
+                                            "name": "RegistrationDate",
+                                            "type": "Date"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "CustomerStatus",
+                                            "type": "String",
+                                            "physicalType": "varchar"
+                                        },
+                                        "sink": {
+                                            "name": "CustomerStatus",
+                                            "type": "String",
+                                            "physicalType": "UTF8"
+                                        }
+                                    },
+                                    {
+                                        "source": {
+                                            "name": "CreatedDate",
+                                            "type": "DateTime",
+                                            "physicalType": "datetime2"
+                                        },
+                                        "sink": {
+                                            "name": "CreatedDate",
+                                            "type": "DateTime",
+                                            "physicalType": "INT_96"
+                                        }
+                                    }
+                                ],
+                                "typeConversion": true,
+                                "typeConversionSettings": {
+                                    "allowDataTruncation": true,
+                                    "treatBooleanAsNumber": false
+                                }
+                            }
+                        },
+                        "inputs": [
+                            {
+                                "referenceName": "DS_SQL_DimCustomer",
+                                "type": "DatasetReference",
+                                "parameters": {
+                                    "pSchema": "bank",
+                                    "pTable": "DimCustomer"
+                                }
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "referenceName": "DS_ADLS_DimCustomer_Bronze",
+                                "type": "DatasetReference",
+                                "parameters": {}
+                            }
+                        ]
+                    }
+                ],
+                "policy": {
+                    "elapsedTimeMetric": {}
+                },
+                "annotations": [],
+                "lastPublishTime": "2026-11-16T06:56:17Z"
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/datasets/DS_SQL_DimCustomer')]",
+                "[concat(variables('factoryId'), '/datasets/DS_ADLS_DimCustomer_Bronze')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/PL_NEXUS_METADATA_DRIVEN_BRONZE')]",
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "Lookup_Config",
+                        "type": "Lookup",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "source": {
+                                "type": "SqlServerSource",
+                                "queryTimeout": "02:00:00",
+                                "partitionOption": "None"
+                            },
+                            "dataset": {
+                                "referenceName": "DS_SQL_IngestionConfig",
+                                "type": "DatasetReference",
+                                "parameters": {}
+                            },
+                            "firstRowOnly": false
+                        }
+                    },
+                    {
+                        "name": "ForEach_Table",
+                        "type": "ForEach",
+                        "dependsOn": [
+                            {
+                                "activity": "Lookup_Config",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "userProperties": [],
+                        "typeProperties": {
+                            "items": {
+                                "value": "@activity('Lookup_Config').output.value",
+                                "type": "Expression"
+                            },
+                            "isSequential": true,
+                            "activities": [
+                                {
+                                    "name": "Copy_Dynamic_Table",
+                                    "type": "Copy",
+                                    "dependsOn": [],
+                                    "policy": {
+                                        "timeout": "0.12:00:00",
+                                        "retry": 0,
+                                        "retryIntervalInSeconds": 30,
+                                        "secureOutput": false,
+                                        "secureInput": false
+                                    },
+                                    "userProperties": [],
+                                    "typeProperties": {
+                                        "source": {
+                                            "type": "SqlServerSource",
+                                            "queryTimeout": "02:00:00",
+                                            "partitionOption": "None"
+                                        },
+                                        "sink": {
+                                            "type": "ParquetSink",
+                                            "storeSettings": {
+                                                "type": "AzureBlobFSWriteSettings"
+                                            },
+                                            "formatSettings": {
+                                                "type": "ParquetWriteSettings"
+                                            }
+                                        },
+                                        "enableStaging": false,
+                                        "translator": {
+                                            "type": "TabularTranslator",
+                                            "typeConversion": true,
+                                            "typeConversionSettings": {
+                                                "allowDataTruncation": true,
+                                                "treatBooleanAsNumber": false
+                                            }
+                                        }
+                                    },
+                                    "inputs": [
+                                        {
+                                            "referenceName": "DS_SQL_DimCustomer",
+                                            "type": "DatasetReference",
+                                            "parameters": {
+                                                "pSchema": "@item().SourceSchema",
+                                                "pTable": "@item().SourceTable"
+                                            }
+                                        }
+                                    ],
+                                    "outputs": [
+                                        {
+                                            "referenceName": "DS_ADLS_DimCustomer_Bronze",
+                                            "type": "DatasetReference",
+                                            "parameters": {
+                                                "pFolder": "@item().TargetFolder",
+                                                "pFileName": "@item().TargetFileName"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "policy": {
+                    "elapsedTimeMetric": {}
+                },
+                "annotations": [],
+                "lastPublishTime": "2026-11-16T06:56:17Z"
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/datasets/DS_SQL_IngestionConfig')]",
+                "[concat(variables('factoryId'), '/datasets/DS_SQL_DimCustomer')]",
+                "[concat(variables('factoryId'), '/datasets/DS_ADLS_DimCustomer_Bronze')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/PL_NEXUS_INCREMENTAL_TRANSACTION')]",
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "Lookup_Watermark",
+                        "type": "Lookup",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "source": {
+                                "type": "SqlServerSource",
+                                "sqlReaderQuery": "SELECT\n    TableName,\n    WatermarkColumn,\n    LastWatermarkValue\nFROM control.WatermarkTable\nWHERE TableName = 'FactTransaction';",
+                                "queryTimeout": "02:00:00",
+                                "partitionOption": "None"
+                            },
+                            "dataset": {
+                                "referenceName": "DS_SQL_IngestionConfig",
+                                "type": "DatasetReference",
+                                "parameters": {}
+                            }
+                        }
+                    },
+                    {
+                        "name": "Copy_Incremental_Transaction",
+                        "type": "Copy",
+                        "dependsOn": [
+                            {
+                                "activity": "Lookup_Watermark",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "source": {
+                                "type": "SqlServerSource",
+                                "sqlReaderQuery": {
+                                    "value": "@concat(\n'SELECT * FROM bank.FactTransaction WHERE TransactionDate > CONVERT(datetime2(7), ''',\nreplace(activity('Lookup_Watermark').output.firstRow.LastWatermarkValue,'Z',''),\n''', 126)'\n)",
+                                    "type": "Expression"
+                                },
+                                "queryTimeout": "02:00:00",
+                                "partitionOption": "None"
+                            },
+                            "sink": {
+                                "type": "ParquetSink",
+                                "storeSettings": {
+                                    "type": "AzureBlobFSWriteSettings"
+                                },
+                                "formatSettings": {
+                                    "type": "ParquetWriteSettings"
+                                }
+                            },
+                            "enableStaging": false,
+                            "translator": {
+                                "type": "TabularTranslator",
+                                "typeConversion": true,
+                                "typeConversionSettings": {
+                                    "allowDataTruncation": true,
+                                    "treatBooleanAsNumber": false
+                                }
+                            }
+                        },
+                        "inputs": [
+                            {
+                                "referenceName": "DS_SQL_DimCustomer",
+                                "type": "DatasetReference",
+                                "parameters": {
+                                    "pSchema": "bank",
+                                    "pTable": "FactTransaction"
+                                }
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "referenceName": "DS_ADLS_DimCustomer_Bronze",
+                                "type": "DatasetReference",
+                                "parameters": {
+                                    "pFolder": "facttransaction/incremental",
+                                    "pFileName": "FactTransaction_Incremental.parquet"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "SP_Update_Transaction_Watermark",
+                        "type": "SqlServerStoredProcedure",
+                        "dependsOn": [
+                            {
+                                "activity": "Copy_Incremental_Transaction",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "storedProcedureName": "[[control].[usp_UpdateFactTransactionWatermark]"
+                        },
+                        "linkedServiceName": {
+                            "referenceName": "LS_SQLSERVER_NEXUSBANK",
+                            "type": "LinkedServiceReference"
+                        }
+                    },
+                    {
+                        "name": "SP_Log_Pipeline_Success",
+                        "type": "SqlServerStoredProcedure",
+                        "dependsOn": [
+                            {
+                                "activity": "SP_Update_Transaction_Watermark",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "storedProcedureName": "audit.usp_InsertPipelineAudit",
+                            "storedProcedureParameters": {
+                                "EndTime": {
+                                    "value": {
+                                        "value": "@utcNow()",
+                                        "type": "Expression"
+                                    },
+                                    "type": "DateTime"
+                                },
+                                "ErrorMessage": {
+                                    "value": null,
+                                    "type": "String"
+                                },
+                                "PipelineName": {
+                                    "value": {
+                                        "value": "@pipeline().Pipeline",
+                                        "type": "Expression"
+                                    },
+                                    "type": "String"
+                                },
+                                "PipelineStatus": {
+                                    "value": "Succeeded",
+                                    "type": "String"
+                                },
+                                "RowsCopied": {
+                                    "value": {
+                                        "value": "@activity('Copy_Incremental_Transaction').output.rowsCopied",
+                                        "type": "Expression"
+                                    },
+                                    "type": "Int64"
+                                },
+                                "RowsRead": {
+                                    "value": {
+                                        "value": "@activity('Copy_Incremental_Transaction').output.rowsRead",
+                                        "type": "Expression"
+                                    },
+                                    "type": "Int64"
+                                },
+                                "RunID": {
+                                    "value": {
+                                        "value": "@pipeline().RunId",
+                                        "type": "Expression"
+                                    },
+                                    "type": "String"
+                                },
+                                "StartTime": {
+                                    "value": {
+                                        "value": "@utcNow()",
+                                        "type": "Expression"
+                                    },
+                                    "type": "DateTime"
+                                },
+                                "TableName": {
+                                    "value": "FactTransaction",
+                                    "type": "String"
+                                }
+                            }
+                        },
+                        "linkedServiceName": {
+                            "referenceName": "LS_SQL_NEXUS_AUDIT",
+                            "type": "LinkedServiceReference"
+                        }
+                    }
+                ],
+                "policy": {
+                    "elapsedTimeMetric": {}
+                },
+                "annotations": [],
+                "lastPublishTime": "2026-11-16T06:56:17Z"
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/datasets/DS_SQL_IngestionConfig')]",
+                "[concat(variables('factoryId'), '/datasets/DS_SQL_DimCustomer')]",
+                "[concat(variables('factoryId'), '/datasets/DS_ADLS_DimCustomer_Bronze')]",
+                "[concat(variables('factoryId'), '/linkedServices/LS_SQLSERVER_NEXUSBANK')]",
+                "[concat(variables('factoryId'), '/linkedServices/LS_SQL_NEXUS_AUDIT')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/PL_NEXUS_MASTER_ORCHESTRATION')]",
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "EXE_METADATA_DRIVEN_BRONZE",
+                        "type": "ExecutePipeline",
+                        "dependsOn": [],
+                        "policy": {
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "pipeline": {
+                                "referenceName": "PL_NEXUS_METADATA_DRIVEN_BRONZE",
+                                "type": "PipelineReference"
+                            },
+                            "waitOnCompletion": true,
+                            "parameters": {}
+                        }
+                    },
+                    {
+                        "name": "EXE_DIMCUSTOMER_BRONZE",
+                        "type": "ExecutePipeline",
+                        "dependsOn": [
+                            {
+                                "activity": "EXE_METADATA_DRIVEN_BRONZE",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "pipeline": {
+                                "referenceName": "PL_NEXUS_DIMCUSTOMER_BRONZE",
+                                "type": "PipelineReference"
+                            },
+                            "waitOnCompletion": true,
+                            "parameters": {}
+                        }
+                    },
+                    {
+                        "name": "EXE_INCREMENTAL_TRANSACTION",
+                        "type": "ExecutePipeline",
+                        "dependsOn": [
+                            {
+                                "activity": "EXE_DIMCUSTOMER_BRONZE",
+                                "dependencyConditions": [
+                                    "Succeeded"
+                                ]
+                            }
+                        ],
+                        "policy": {
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "pipeline": {
+                                "referenceName": "PL_NEXUS_INCREMENTAL_TRANSACTION",
+                                "type": "PipelineReference"
+                            },
+                            "waitOnCompletion": true,
+                            "parameters": {}
+                        }
+                    }
+                ],
+                "policy": {
+                    "elapsedTimeMetric": {}
+                },
+                "annotations": [],
+                "lastPublishTime": "2026-11-16T06:56:17Z"
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/pipelines/PL_NEXUS_METADATA_DRIVEN_BRONZE')]",
+                "[concat(variables('factoryId'), '/pipelines/PL_NEXUS_DIMCUSTOMER_BRONZE')]",
+                "[concat(variables('factoryId'), '/pipelines/PL_NEXUS_INCREMENTAL_TRANSACTION')]"
+            ]
+        }
+    ]
+}
+
