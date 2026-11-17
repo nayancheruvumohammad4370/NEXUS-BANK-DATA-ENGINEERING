@@ -1,0 +1,29 @@
+﻿# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.publishsettings
+.databrickscfg
+.azure/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Temporary and log files
+*.log
+*.tmp
+*.bak
+
+# Operating system
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
