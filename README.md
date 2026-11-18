@@ -1,73 +1,47 @@
-﻿# NEXUS BANK – Enterprise Banking Data Intelligence Platform
+# NEXUS BANK — Banking Data Engineering Platform
 
 ## Project Overview
-NEXUS BANK is an end-to-end Azure Data Engineering portfolio project that demonstrates how banking data can be ingested, processed, transformed, validated, and presented through a modern analytics platform.
 
-The project uses simulated banking data and focuses on data engineering workflows, data quality, incremental ingestion, Medallion Architecture, dimensional modelling, and business intelligence.
+NEXUS BANK is an end-to-end Azure Data Engineering portfolio project built with simulated banking data. It demonstrates source data preparation, ingestion, orchestration, incremental loading, data quality practice, and a Medallion architecture.
 
 ## Architecture
 
-SQL Server → Python → Azure Data Factory → Azure Data Lake Storage Gen2
-→ Azure Databricks / PySpark → Delta Lake → Star Schema → Power BI
+SQL Server → Azure Data Factory → ADLS Gen2 (Bronze) → Azure Databricks / PySpark (Silver and Gold — in progress) → Power BI (planned)
 
-## Technologies Used
+## Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | SQL Server | Source database, tables, stored procedures and validation |
-| Python | Synthetic data generation and data processing |
-| Azure Data Factory | Data ingestion, orchestration and incremental pipelines |
-| ADLS Gen2 | Bronze, Silver and Gold data storage |
-| Azure Databricks | PySpark transformations and data processing |
-| Delta Lake | Reliable storage and transactional data management |
-| Unity Catalog | Data organization and governance practice |
-| Power BI | Data modelling, DAX and dashboards |
-| Git / GitHub | Source control and project documentation |
+| Python | Synthetic data generation |
+| Azure Data Factory | Ingestion, orchestration and incremental pipelines |
+| ADLS Gen2 | Bronze, Silver and Gold storage layers |
+| Azure Databricks / PySpark | Lakehouse transformations |
+| Delta Lake | Target format for curated lakehouse data |
+| Power BI | Planned analytical reporting |
+| Git / GitHub | Version control and documentation |
 
-## Data Model
+## Current Implementation
 
-The project includes banking dimensions and fact tables.
+Implemented ADF pipelines include:
 
-### Dimension Tables
-- DimCustomer
-- DimAccount
-- DimBranch
-- DimCard
-- DimMerchant
-- DimDate
+- `PL_NEXUS_METADATA_DRIVEN_BRONZE` — metadata-driven Bronze ingestion
+- `PL_NEXUS_INCREMENTAL_TRANSACTION` — incremental transaction ingestion
+- `PL_NEXUS_DIMCUSTOMER_BRONZE` — customer Bronze ingestion
+- `PL_NEXUS_MASTER_ORCHESTRATION` — master pipeline orchestration
 
-### Fact Tables
-- FactTransaction
-- FactPayment
-- FactATMWithdrawal
-- FactLoginActivity
+The project also includes a simulated banking source schema, synthetic datasets with intentional data-quality issues, watermark-based incremental loading, and pipeline audit concepts.
 
-## Medallion Architecture
+## Medallion Architecture Roadmap
 
-- **Bronze:** Raw data ingested from source systems.
-- **Silver:** Cleaned, standardized and validated Delta datasets.
-- **Gold:** Business-ready analytical datasets and dimensional star schema.
+- **Bronze:** Raw source ingestion to ADLS Gen2 — implementation underway.
+- **Silver:** Data cleansing, standardization, validation and Delta processing — in progress.
+- **Gold:** Curated analytical datasets and dimensional model — planned.
+- **Power BI:** Business-facing reports and dashboards — planned.
 
-## Project Implementation Highlights
+## Data Quality Practice
 
-- Designed a banking database with primary and foreign key relationships.
-- Generated synthetic banking datasets with intentional data-quality issues.
-- Implemented data ingestion and orchestration using Azure Data Factory.
-- Practiced metadata-driven and incremental ingestion patterns.
-- Implemented watermark and pipeline audit concepts.
-- Processed Silver Delta datasets using Databricks and PySpark.
-- Validated primary keys and foreign key relationships.
-- Built a dimensional star schema with customer, account, branch, merchant and date dimensions.
-- Prepared Gold analytical datasets for Power BI reporting.
-- Developed banking analytics measures and dashboard designs.
-
-## Analytical Areas
-
-1. Executive Banking Overview
-2. Transaction and Branch Performance
-3. Customer and Account Analytics
-4. Payments and ATM Analytics
-5. Login Activity and Security Monitoring
+Synthetic sample data intentionally includes issues such as inconsistent casing and whitespace, nulls, duplicates, inconsistent categories/statuses, and selected malformed values. These are practice scenarios for cleansing and validation, not real customer information.
 
 ## Repository Structure
 
@@ -80,5 +54,7 @@ NEXUS-BANK-DATA-ENGINEERING/
 ├── 05_POWER_BI/
 ├── 06_ARCHITECTURE_DIAGRAMS/
 ├── 07_PROJECT_DOCUMENTATION/
-├── .gitignore
 └── README.md
+```
+
+*Project status: actively being developed. Features are documented as implemented, in progress, or planned to keep the project status transparent.*
